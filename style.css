@@ -1,0 +1,436 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: crosshair;
+
+    }
+body{
+    background-color: black;
+    }
+
+nav{
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1.4em 8%;
+}
+
+
+#menu{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+#menu li {
+    padding-left: 3vw;
+    display: flex;
+    justify-content: center;
+    width: 100vh;
+    font-size: 0.9em;
+    font-weight: 100;
+ 
+}
+#menu li a{
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    border-bottom: 0.1em solid transparent;
+    transition: all .50s ease;
+    font-family: 'Oxanium-Reg'
+}
+
+#menu li a:hover{
+border-bottom: .1em solid white;
+cursor: crosshair;
+}
+
+.content{
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.content h1{
+    font-family: 'Rubik Broken Fax', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    font-size: 9em;
+    color: white;
+    font-weight: 100;
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: 20%;
+    margin-inline: auto;
+    padding-left: 2.5vw;
+}
+
+
+.content h2{
+    position: fixed;
+    margin-top: 65vh;
+    width:99.4%;
+    display: flex;
+    justify-content: center;
+    font-size: 2.2em;
+    color: white;
+    font-weight: 300;
+}
+.footer h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+height: 5vh;
+    margin-top: 3.8em;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+
+    font-size: 1.2em;
+    color: white;
+    font-weight: 100;
+}
+
+
+.back-video{
+    position: fixed;
+    width: 90vw;
+    object-fit: cover;
+    z-index: -1;
+    }
+
+/* ---------------------------------------------------STYLES--------------------------------------------------- */
+
+.body2, .bronnenbody{
+    background-image: url(./img/backgr4.avif);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: darkgray;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.centeredpage,.bronnenbody{
+    margin-bottom: 3em;
+    margin-right: 9em;
+    margin-left: 9em;
+}
+
+.avantgarde h1,.subbasics h1,.og h1{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: 'Oxanium-Reg';
+    font-size: 1.7em;
+    margin-top: 2em;
+}
+
+.avantgarde p:first-of-type, .subbasics p:first-of-type{
+    font-family:  'Oxanium-ExtraLight';
+    font-size: 1.2em;
+}
+.avantgarde img, .subbasics img, .og img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+}
+figcaption:first-of-type{
+    margin-top: .5em;
+    color: white;
+    font-family: 'Oxanium-ExtraLight';
+    font-size: 80%;
+    text-align: center;
+}
+.main p{
+    color: white;
+    font-family: 'Oxanium-Light';
+    text-align: center;
+    width: 50em;
+    margin-left: auto;
+margin-right: auto;
+}
+
+/* ---------------------------------------------------HYEIN SEO--------------------------------------------------- */
+
+  h4{
+    color: white;
+    font-size: 4.5em;
+    font-family: 'Rubik Broken Fax';
+    font-weight: 100;
+    margin-top: 1.5em;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.4em;
+}
+
+.intro{
+    color: white;
+text-align: center;
+}
+.intro p,p{
+font-family: 'Oxanium-ExtraLight';
+width: 34em;
+}
+
+/* ---------------------------------------------------CARDS--------------------------------------------------- */
+.footcap{
+    color: white;
+    font-family: 'Oxanium-ExtraLight';
+    text-align: center;
+    font-size: 1.2em;
+}
+.cardsborder{
+display: flex;
+justify-content: center;
+}
+
+:root {
+    --card-height: 30em;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+
+
+  .card {
+
+    padding: 2em 0.01em;
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 2500px;
+    display: inline-flex;
+    margin-left: 1vw;
+    margin-right: 1vw;
+
+  }
+  
+  .cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .container {
+    transition: all 0.5s;
+    position: relative;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .card:hover .container {
+    transform: perspective(56em) translateY(-10%) rotateX(25deg) translateZ(0);
+    opacity: .7;
+  }
+  .container::before,
+  .container::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+  }
+
+  
+  
+  .card:hover .container::before,
+  .container::after {
+    opacity: 1;
+  }
+  
+  .card:hover .container::after {
+    height: 7.5em;
+  }
+  .title {
+    width: 100%;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.5s;
+  }
+ 
+  
+  .character {
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  .card:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
+  }
+  
+/* ---------------------------------------------------ANDERSSON BELL--------------------------------------------------- */
+
+
+/* -----------------------------------------------------AE SYNCTX--------------------------------------------------- */
+
+
+/* -------------------------------------------------------PAF--------------------------------------------------- */
+.paf img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.paf{
+  
+}
+.paf figcaption{
+    color: white;
+    font-family: 'Oxanium-ExtraLight';
+    font-size: 80%;
+    width: 100%;
+    height: fit-content;
+}
+/* -----------------------------------------------------FOOTER--------------------------------------------------- */
+footer a{
+color: white;
+text-decoration: none;
+border-bottom: 0.1em solid transparent;
+transition: all .55s ease;
+display: flex;
+justify-content: center;
+margin-top: 2em;
+font-family: 'Oxanium-ExtraLight';
+margin-top: 4em;
+}
+
+footer a:hover{
+color: rgb(177 167 155)
+}
+
+/* ---------------------------------------------------FONTS--------------------------------------------------- */
+
+@font-face {
+    font-family: 'Coda';
+    src: url(fonts/Coda-Regular.eot);
+    src: url('Coda-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Coda-Regular.woff2') format('woff2'),
+        url('Coda-Regular.woff') format('woff'),
+        url(fonts/Coda-Regular.ttf) format('truetype'),
+        url('Coda-Regular.svg#Coda-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oxanium-ExtraLight';
+    src: url('Oxanium-ExtraLight.eot');
+    src: url('Oxanium-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('Oxanium-ExtraLight.woff2') format('woff2'),
+        url('Oxanium-ExtraLight.woff') format('woff'),
+        url(fonts/Oxanium-ExtraLight.ttf) format('truetype'),
+        url('Oxanium-ExtraLight.svg#Oxanium-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oxanium-Light';
+    src: url('Oxanium-Light.eot');
+    src: url('Oxanium-Light.eot?#iefix') format('embedded-opentype'),
+        url('Oxanium-Light.woff2') format('woff2'),
+        url('Oxanium-Light.woff') format('woff'),
+        url(fonts/Oxanium-Light.ttf) format('truetype'),
+        url('Oxanium-Light.svg#Oxanium-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Coda-Bold';
+    src: url('Coda-ExtraBold.eot');
+    src: url('Coda-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Coda-ExtraBold.woff2') format('woff2'),
+        url('Coda-ExtraBold.woff') format('woff'),
+        url(fonts/Coda-ExtraBold.ttf) format('truetype'),
+        url('Coda-ExtraBold.svg#Coda-ExtraBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Rubik Broken Fax';
+    src: url('RubikBrokenFax-Regular.eot');
+    src: url('RubikBrokenFax-Regular.eot?#iefix') format('embedded-opentype'),
+        url('RubikBrokenFax-Regular.woff2') format('woff2'),
+        url('RubikBrokenFax-Regular.woff') format('woff'),
+        url(fonts/RubikBrokenFax-Regular.ttf) format('truetype'),
+        url('RubikBrokenFax-Regular.svg#RubikBrokenFax-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Oxanium-Reg';
+    src: url('Oxanium-Regular.eot');
+    src: url('Oxanium-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Oxanium-Regular.woff2') format('woff2'),
+        url('Oxanium-Regular.woff') format('woff'),
+        url(fonts/Oxanium-Regular.ttf) format('truetype'),
+        url('Oxanium-Regular.svg#Oxanium-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* ---------------------------------------------------BRONNEN PAGE--------------------------------------------------- */
+
+.backto a{
+    margin-top: 3em;
+display: flex;
+justify-self: left;
+color: white;
+text-decoration:none;
+font-family: 'Oxanium-Reg';
+border-bottom: 0.1em solid transparent;
+transition: all .50s ease;
+width: fit-content;
+}
+.backto a:hover{
+    border-bottom: .1em solid white;
+    cursor: crosshair;
+    }
+.bronnenbody h1{
+    color: white;
+    text-align: center;
+    font-family: 'Oxanium-Reg';
+
+}
+.bronnenbody h2{
+    color: white;
+    text-align: center;
+    font-family: 'Oxanium-Light';
+
+}
+.bronnenbody{
+cursor: crosshair;
+}
+
+.Bronnenlinks a{
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-family: 'Oxanium-ExtraLight';
+}
